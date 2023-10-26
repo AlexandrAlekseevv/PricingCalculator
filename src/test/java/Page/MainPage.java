@@ -20,7 +20,6 @@ public class MainPage extends AbstractPage {
 
 
     public SearchResultsPage invokePageWithSearchResults(String searchText){
-        searchButton.click();
         searchButton.sendKeys(searchText + "\n");
         return new SearchResultsPage(driver);
     }
