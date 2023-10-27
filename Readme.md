@@ -11,8 +11,9 @@ Hardcore
     * Number of instances: 4
     * What are these instances for?: оставить пустым
     * Operating System / Software: Free: Debian, CentOS, CoreOS, Ubuntu, or other User Provided OS
-    * VM Class: Regular
-    * Instance type: n1-standard-8    (vCPUs: 8, RAM: 30 GB)
+    * Provisioning Model: Regular
+    * Series : n1
+    * Machine Type : n1-standard-8    (vCPUs: 8, RAM: 30 GB)
     * Выбрать Add GPUs
         * Number of GPUs: 1
         * GPU type: NVIDIA Tesla V100

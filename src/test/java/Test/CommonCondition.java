@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class CommonCondition {
 
     protected final String SEARCH_FIELD_TEXT = "Google Cloud Pricing Calculator";
-    protected final String SEARCHING_TEXT = "Google Cloud Pricing Calculator";
+
 
     protected WebDriver driver;
 

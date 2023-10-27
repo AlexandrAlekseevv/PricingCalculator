@@ -27,11 +27,7 @@ public class DriverSingleton {
             }
             driver.manage().window().maximize();
         }
-//        if (null == driver) {
-//
-//            driver = new ChromeDriver();
-//        }
-//        driver.manage().window().maximize();
+
         return driver;
     }
 

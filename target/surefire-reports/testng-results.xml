@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-26T19:27:56 GET" name="Surefire suite" finished-at="2023-10-26T19:28:15 GET" duration-ms="18498">
+  <suite started-at="2023-10-27T12:05:24 GET" name="Surefire suite" finished-at="2023-10-27T12:05:42 GET" duration-ms="18432">
     <groups>
     </groups>
-    <test started-at="2023-10-26T19:27:56 GET" name="Surefire test" finished-at="2023-10-26T19:28:15 GET" duration-ms="18498">
+    <test started-at="2023-10-27T12:05:24 GET" name="Surefire test" finished-at="2023-10-27T12:05:42 GET" duration-ms="18432">
       <class name="Test.SearchFieldTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.SearchFieldTest@d4342c2]" started-at="2023-10-26T19:27:56 GET" name="setUp" finished-at="2023-10-26T19:27:59 GET" duration-ms="2604" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.SearchFieldTest@d4342c2]" started-at="2023-10-27T12:05:24 GET" name="setUp" finished-at="2023-10-27T12:05:27 GET" duration-ms="2940" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="trueIsTrue()[pri:0, instance:Test.SearchFieldTest@d4342c2]" started-at="2023-10-26T19:27:59 GET" name="trueIsTrue" finished-at="2023-10-26T19:28:14 GET" duration-ms="15420" status="PASS">
+        <test-method signature="trueIsTrue()[pri:0, instance:Test.SearchFieldTest@d4342c2]" started-at="2023-10-27T12:05:27 GET" name="trueIsTrue" finished-at="2023-10-27T12:05:42 GET" duration-ms="15027" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- trueIsTrue -->
-        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:Test.SearchFieldTest@d4342c2]" started-at="2023-10-26T19:28:14 GET" name="stopBrowser" finished-at="2023-10-26T19:28:15 GET" duration-ms="424" status="PASS">
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:Test.SearchFieldTest@d4342c2]" started-at="2023-10-27T12:05:42 GET" name="stopBrowser" finished-at="2023-10-27T12:05:42 GET" duration-ms="418" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopBrowser -->

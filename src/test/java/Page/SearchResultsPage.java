@@ -18,10 +18,6 @@ public class SearchResultsPage extends AbstractPage {
     @FindBy(xpath = "//input[@placeholder = 'Search' and @class ='catalog-filter-bar gc-analytics-event']")
     WebElement searchField;
 
-//    List<WebElement> resultsList = driver.findElements(By.xpath("//div[@class='gs-title']/a/b[ text() ='" + searchText + "']"));
-
-    //@FindBy(xpath = "//div[@class='gs-title']/a/b[ text() ='" + searchText + "']")
-
     private final String PAGE_URL = "https://cloud.google.com/s/results";
 
     protected SearchResultsPage(WebDriver driver) {
@@ -32,11 +28,7 @@ public class SearchResultsPage extends AbstractPage {
 
     public PricingCalculatorPage openSearchedPage(String searchingText) {
         List<WebElement> resultsList = driver.findElements(By.xpath("//div[@class='gs-title']/a/b[ text() ='" + searchingText + "']"));
-
-
         resultsList.get(0).click();
-
-
         return new PricingCalculatorPage(driver);
 
     }

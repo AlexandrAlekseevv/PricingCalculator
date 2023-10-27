@@ -1,5 +1,6 @@
 package Page;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,7 +21,7 @@ public class MainPage extends AbstractPage {
 
 
     public SearchResultsPage invokePageWithSearchResults(String searchText){
-        searchButton.sendKeys(searchText + "\n");
+        searchButton.sendKeys(searchText , Keys.ENTER);
         return new SearchResultsPage(driver);
     }
 
