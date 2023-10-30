@@ -26,9 +26,12 @@ public class SearchResultsPage extends AbstractPage {
 
     }
 
-    public PricingCalculatorPage openSearchedPage(String searchingText) {
-        List<WebElement> resultsList = driver.findElements(By.xpath("//div[@class='gs-title']/a/b[ text() ='" + searchingText + "']"));
+    public PricingCalculatorPage openSearchedPage(String searchingText) throws InterruptedException {
+        String path = String.format("//div[@class='gs-title']/a/b[ text() ='%s']",searchingText);
+        new WebDriverWait(driver,Duration.ofSeconds(5)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(path)));
+        List<WebElement> resultsList = driver.findElements(By.xpath(path));
         resultsList.get(0).click();
+        Thread.sleep(5000);
         return new PricingCalculatorPage(driver);
 
     }

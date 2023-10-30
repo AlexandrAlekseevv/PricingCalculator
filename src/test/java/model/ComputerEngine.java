@@ -5,8 +5,6 @@ import java.util.Objects;
 public class ComputerEngine {
 
     private String numberOfInstance;
-
-
     private String whatAreTheseInstancesFor;
     private String operatingSystemSoftware;
     private String provisioningModel;

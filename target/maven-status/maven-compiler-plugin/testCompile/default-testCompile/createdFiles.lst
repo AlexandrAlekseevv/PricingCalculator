@@ -1,7 +1,11 @@
-Page\PricingCalculatorPage.class
+Utils\XPathExtractor.class
 Page\AbstractPage.class
-driver\DriverSingleton.class
 Page\MainPage.class
 Page\SearchResultsPage.class
-Test\CommonCondition.class
 Test\SearchFieldTest.class
+Page\PricingCalculatorPage.class
+service\TestDataReader.class
+model\ComputerEngine.class
+driver\DriverSingleton.class
+service\ComputerEngineCreator.class
+Test\CommonCondition.class
