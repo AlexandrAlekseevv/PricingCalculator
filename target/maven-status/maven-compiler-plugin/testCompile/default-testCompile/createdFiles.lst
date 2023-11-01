@@ -1,11 +1,12 @@
-Utils\XPathExtractor.class
 Page\AbstractPage.class
 Page\MainPage.class
 Page\SearchResultsPage.class
 Test\SearchFieldTest.class
+Utils\BrowserNavigation.class
 Page\PricingCalculatorPage.class
 service\TestDataReader.class
 model\ComputerEngine.class
 driver\DriverSingleton.class
 service\ComputerEngineCreator.class
 Test\CommonCondition.class
+Page\YopMail.class

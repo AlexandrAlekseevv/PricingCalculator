@@ -10,7 +10,6 @@ public class ComputerEngine {
     private String provisioningModel;
     private String series;
     private String machineType;
-    //Add GPUs.click();
     private String numbersOfGPUs;
     private String GPUType;
     private String localSSD;

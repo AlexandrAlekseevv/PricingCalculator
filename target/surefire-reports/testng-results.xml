@@ -2,29 +2,29 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-30T21:33:50 GET" name="Surefire suite" finished-at="2023-10-30T21:34:10 GET" duration-ms="20236">
+  <suite started-at="2023-11-01T15:13:27 GET" name="Surefire suite" finished-at="2023-11-01T15:14:16 GET" duration-ms="49463">
     <groups>
     </groups>
-    <test started-at="2023-10-30T21:33:50 GET" name="Surefire test" finished-at="2023-10-30T21:34:10 GET" duration-ms="20236">
+    <test started-at="2023-11-01T15:13:27 GET" name="Surefire test" finished-at="2023-11-01T15:14:16 GET" duration-ms="49463">
       <class name="Test.SearchFieldTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.SearchFieldTest@d4342c2]" started-at="2023-10-30T21:33:50 GET" name="setUp" finished-at="2023-10-30T21:33:53 GET" duration-ms="3517" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.SearchFieldTest@d4342c2]" started-at="2023-11-01T15:13:27 GET" name="setUp" finished-at="2023-11-01T15:13:29 GET" duration-ms="2679" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="trueIsTrue()[pri:0, instance:Test.SearchFieldTest@d4342c2]" started-at="2023-10-30T21:33:53 GET" name="trueIsTrue" finished-at="2023-10-30T21:34:10 GET" duration-ms="16668" status="FAIL">
+        <test-method signature="trueIsTrue()[pri:0, instance:Test.SearchFieldTest@d4342c2]" started-at="2023-11-01T15:13:29 GET" name="trueIsTrue" finished-at="2023-11-01T15:14:16 GET" duration-ms="46729" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [class Page.PricingCalculatorPage] but found [class java.lang.String]]]>
+              <![CDATA[expected [class Page.PricingCalculatorPage] but found [Page.PricingCalculatorPage@5d5160e6]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [class Page.PricingCalculatorPage] but found [class java.lang.String]
+              <![CDATA[java.lang.AssertionError: expected [class Page.PricingCalculatorPage] but found [Page.PricingCalculatorPage@5d5160e6]
 at org.testng.Assert.fail(Assert.java:110)
 at org.testng.Assert.failNotEquals(Assert.java:1413)
 at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 at org.testng.Assert.assertEquals(Assert.java:131)
 at org.testng.Assert.assertEquals(Assert.java:655)
 at org.testng.Assert.assertEquals(Assert.java:665)
-at Test.SearchFieldTest.trueIsTrue(SearchFieldTest.java:26)
+at Test.SearchFieldTest.trueIsTrue(SearchFieldTest.java:28)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

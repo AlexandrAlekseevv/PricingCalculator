@@ -14,6 +14,16 @@ public class MainPage extends AbstractPage {
     private WebElement searchButton;
 
 
+    @Override
+    public MainPage openPage(boolean isCurrentTab) {
+        if (!isCurrentTab) {
+            openNewTab();
+        }
+        driver.navigate().to(BASE_URL);
+        return this;
+
+    }
+
     public MainPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(this.driver, this);
@@ -26,9 +36,5 @@ public class MainPage extends AbstractPage {
     }
 
 
-    @Override
-    public MainPage openPage() {
-        driver.navigate().to(BASE_URL);
-        return this;
-    }
+
 }

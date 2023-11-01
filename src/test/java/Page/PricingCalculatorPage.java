@@ -1,18 +1,16 @@
 package Page;
 
-import Utils.XPathExtractor;
 import model.ComputerEngine;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-import static Utils.XPathExtractor.extractXPathFromWebElement;
+import static driver.DriverSingleton.*;
+
 
 public class PricingCalculatorPage extends AbstractPage {
 
@@ -57,16 +55,22 @@ public class PricingCalculatorPage extends AbstractPage {
     @FindBy(xpath = " //h2[contains(text(),'Instances')]/..//button[contains(text(),'Add to Estimate')]")
     private WebElement instancesAddToEstimateButton;
 
+    @Override
+    public PricingCalculatorPage openPage(boolean currentTab) {
+        if (!currentTab) {
+            openNewTab();
+        }
+        driver.navigate().to(PAGE_URL);
+        return this;
+
+    }
+
     public PricingCalculatorPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(this.driver, this);
     }
 
-    @Override
-    public PricingCalculatorPage openPage() {
-        driver.navigate().to(PAGE_URL);
-        return this;
-    }
+
 
     public PricingCalculatorPage chooseComputerEngineTab() {
         switchToFormFrame();
@@ -87,60 +91,58 @@ public class PricingCalculatorPage extends AbstractPage {
     }
 
 
-    public PricingCalculatorPage fillComputerEngineForm(ComputerEngine computerEngine) throws InterruptedException {
+
+
+    public PricingCalculatorPage fillComputerEngineForm(ComputerEngine computerEngine) {
 
         switchToFormFrame();
+        computerEngineTab.click();
 
         numberOfInstance.sendKeys(computerEngine.getNumberOfInstance());
 
-        selectOption(whatAreTheseInstancesFor, computerEngine.getWhatAreTheseInstancesFor());
-        selectOption(operatingSystemSoftware, computerEngine.getOperatingSystemSoftware());
-        selectOption(provisioningModel, computerEngine.getProvisioningModel());
-        selectOption(series, computerEngine.getSeries());
-        selectOption(machineType, computerEngine.getMachineType());
+        selectOptionInDropDown(whatAreTheseInstancesFor, computerEngine.getWhatAreTheseInstancesFor());
+        selectOptionInDropDown(operatingSystemSoftware, computerEngine.getOperatingSystemSoftware());
+        selectOptionInDropDown(provisioningModel, computerEngine.getProvisioningModel());
+        selectOptionInDropDown(series, computerEngine.getSeries());
+        selectOptionInDropDown(machineType, computerEngine.getMachineType());
 
         addGPUsCheckbox.click();
 
-        selectOption(GPUType, computerEngine.getGPUType());
-        selectOption(numbersOfGPUs,computerEngine.getNumbersOfGPUs());
-//        numbersOfGPUs.sendKeys(computerEngine.getNumbersOfGPUs());
-        selectOption(localSSD, computerEngine.getLocalSSD());
+        selectOptionInDropDown(GPUType, computerEngine.getGPUType());
+        selectOptionInDropDown(numbersOfGPUs, computerEngine.getNumbersOfGPUs());
+
+        selectOptionInDropDown(localSSD, computerEngine.getLocalSSD());
 
 
-        selectOption(datacenterLocation, computerEngine.getDatacenterLocation());
+        selectOptionInDropDown(datacenterLocation, computerEngine.getDatacenterLocation());
 
 
-
-
-        selectOption(committedUsage, computerEngine.getCommittedUsage());
+        selectOptionInDropDown(committedUsage, computerEngine.getCommittedUsage());
 
         instancesAddToEstimateButton.click();
+
+
 
 
         return this;
     }
 
-    private void selectOption(WebElement webElement, String option) {
-        if (!option.isBlank()) {
 
+
+
+    private void selectOptionInDropDown(WebElement dropDownElement, String option) {
+        if (!option.isBlank()) {
             String optionXpath = String.format(" //div[contains(@id,'select_container') and @aria-hidden = 'false']//div[contains(text(),'%s')]", option);
 
-            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({behavior: 'auto', block: 'center'});", webElement);
+            scrollPageTo(dropDownElement);
 
-            new WebDriverWait(driver, Duration.ofSeconds(10))
-                    .until(ExpectedConditions.elementToBeClickable(webElement))
+            new WebDriverWait(driver, Duration.ofSeconds(WAIT_TIMEOUT_SECONDS))
+                    .until(ExpectedConditions.elementToBeClickable(dropDownElement))
                     .click();
 
-            WebElement optionElement = new WebDriverWait(driver, Duration.ofSeconds(10))
-                    .until(ExpectedConditions.elementToBeClickable(By.xpath(optionXpath)));
-
-            System.out.println(optionElement.isDisplayed() + " : " + option);
-//            ((JavascriptExecutor) driver)
-//                    .executeScript("arguments[0].scrollIntoView({behavior: 'auto', block: 'center'});", optionElement);
-
-//            System.out.println("\n" + extractXPathFromWebElement(webElement) + "/*" + String.format("//md-option[@role='option']/*[contains(text(),'%s')]", option) + "\n");
-
-            optionElement.click();
+            new WebDriverWait(driver, Duration.ofSeconds(WAIT_TIMEOUT_SECONDS))
+                    .until(ExpectedConditions.elementToBeClickable(By.xpath(optionXpath)))
+                    .click();
 
 
         }

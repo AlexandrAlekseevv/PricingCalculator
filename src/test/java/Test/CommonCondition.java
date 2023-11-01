@@ -11,6 +11,8 @@ import java.util.concurrent.TimeUnit;
 public class CommonCondition {
 
     protected final String SEARCH_FIELD_TEXT = "Google Cloud Pricing Calculator";
+    protected final boolean IN_CURRENT_TAB = true;
+    protected final boolean IN_NEW_TAB = false;
 
 
     protected WebDriver driver;
