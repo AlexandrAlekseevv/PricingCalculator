@@ -8,7 +8,6 @@ public abstract class AbstractPage {
     protected WebDriver driver;
     protected final int WAIT_TIMEOUT_SECONDS = 10;
 
-
     protected abstract AbstractPage openPage(boolean isCurrentTab);
 
     protected AbstractPage(WebDriver driver) {
@@ -18,6 +17,9 @@ public abstract class AbstractPage {
 
     protected void scrollPageTo(WebElement webElement) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({behavior: 'auto', block: 'center'});", webElement);
+    }
+    public <T extends AbstractPage> T newWebsitePage(T page) {
+        return page;
     }
 
 

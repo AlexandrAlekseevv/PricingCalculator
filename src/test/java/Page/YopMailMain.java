@@ -1,15 +1,28 @@
 package Page;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class YopMailMain extends AbstractPage {
 
     @FindBy(xpath = "//h3[text()='Random Email generator']")
-    WebElement generateEmailButton;
+    private WebElement generateEmailButton;
 
+//    @FindBy(xpath = "//*[@id='dismiss-button']")
+//    private WebElement closeADButton;
+//    @FindBy(xpath = "/html/ins/div/iframe")
+//    private WebElement iframe1;
+//
+//    @FindBy(id = "ad_iframe")
+//    private WebElement iframe2;
 
 
     private final static String PAGE_URL = "https://yopmail.com/";
@@ -29,12 +42,14 @@ public class YopMailMain extends AbstractPage {
 
     }
 
-    public EmailGenerator createEmail(){
+    public EmailGenerator generateRandomlyEmail() {
         generateEmailButton.click();
-
+        new ADSGoogleVignette(driver).closeADSVignette();
         return new EmailGenerator(driver);
-
-
     }
+
+
+
+
 
 }

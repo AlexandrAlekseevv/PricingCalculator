@@ -9,8 +9,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-import static driver.DriverSingleton.*;
-
 
 public class PricingCalculatorPage extends AbstractPage {
 
@@ -78,16 +76,14 @@ public class PricingCalculatorPage extends AbstractPage {
         return this;
     }
 
-    private PricingCalculatorPage switchToFormFrame() {
+    private void switchToFormFrame() {
 
         driver.switchTo().frame(iframe1).switchTo().frame(iframe2);
 
-        return this;
     }
 
-    public PricingCalculatorPage switchToDefaultContent() {
+    public void switchToDefaultContent() {
         driver.switchTo().defaultContent();
-        return this;
     }
 
 
@@ -121,11 +117,10 @@ public class PricingCalculatorPage extends AbstractPage {
 
         instancesAddToEstimateButton.click();
 
-
-
-
         return this;
     }
+
+
 
 
 

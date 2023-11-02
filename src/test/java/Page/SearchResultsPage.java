@@ -37,7 +37,9 @@ public class SearchResultsPage extends AbstractPage {
 
     public PricingCalculatorPage openSearchedPage(String searchingText) {
         String path = String.format("//div[@class='gs-title']/a/b[ text() ='%s']",searchingText);
-        new WebDriverWait(driver,Duration.ofSeconds(WAIT_TIMEOUT_SECONDS)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(path)));
+
+        new WebDriverWait(driver,Duration.ofSeconds(WAIT_TIMEOUT_SECONDS))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(path)));
         List<WebElement> resultsList = driver.findElements(By.xpath(path));
         resultsList.get(0).click();
         return new PricingCalculatorPage(driver);

@@ -9,15 +9,19 @@ public class EmailGenerator extends AbstractPage{
     private final static String PAGE_URL ="https://yopmail.com/email-generator";
 
     @FindBy(id = "egen")
-    WebElement FieldWithCreatedEmail;
+    WebElement fieldWithCreatedEmail;
+    @FindBy(id = "cprnd")
+    WebElement copyToClipoardButton;
+    @FindBy(xpath = "//button[@onclick='egengo();']")
+    WebElement checkInboxButton;
 
-    protected EmailGenerator(WebDriver driver) {
+    public EmailGenerator(WebDriver driver) {
         super(driver);
         PageFactory.initElements(this.driver,this);
     }
 
     @Override
-    protected AbstractPage openPage(boolean isCurrentTab) {
+    public AbstractPage openPage(boolean isCurrentTab) {
         if (!isCurrentTab) {
             openNewTab();
         }

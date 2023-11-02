@@ -1,16 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 50.04 s <<< FAILURE! -- in TestSuite
-Test.SearchFieldTest.trueIsTrue -- Time elapsed: 46.74 s <<< FAILURE!
-java.lang.AssertionError: expected [class Page.PricingCalculatorPage] but found [Page.PricingCalculatorPage@5d5160e6]
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 31.03 s <<< FAILURE! -- in TestSuite
+Test.SearchFieldTest.trueIsTrue -- Time elapsed: 27.71 s <<< FAILURE!
+java.lang.AssertionError: expected [class Page.PricingCalculatorPage] but found [Page.EmailGenerator@55e2fe3c]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at Test.SearchFieldTest.trueIsTrue(SearchFieldTest.java:28)
+	at Test.SearchFieldTest.trueIsTrue(SearchFieldTest.java:29)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
