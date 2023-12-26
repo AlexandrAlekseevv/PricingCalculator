@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.time.Duration;
 
@@ -14,6 +16,7 @@ import java.time.Duration;
 public class PricingCalculatorLegacyPage extends AbstractPage {
 
     private final String PAGE_URL = "https://cloud.google.com/products/calculator-legacy";
+    private final Logger logger = LogManager.getRootLogger();
 
     @FindBy(xpath = "//md-tab-item//span[text() = 'Compute Engine']")
     WebElement computerEngineTab;
@@ -133,6 +136,8 @@ public class PricingCalculatorLegacyPage extends AbstractPage {
         selectOptionInDropDown(committedUsage, computerEngine.getCommittedUsage());
 
         instancesAddToEstimateButton.click();
+
+        logger.info("Created new Estimate: [" + computerEngine + "]");
 
         return this;
     }

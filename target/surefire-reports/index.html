@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Surefire_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="Test.SearchFieldTest" class="method navigator-link" hash-for-method="verifyTotalEstimatedMonthlyCost">verifyTotalEstimatedMonthlyCost</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="Test.PricingCalculatorTest" class="method navigator-link" hash-for-method="verifyTotalEstimatedMonthlyCost">verifyTotalEstimatedMonthlyCost</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Surefire_suite -->
@@ -117,7 +117,7 @@
                     <div class="method-list-content passed suite-Surefire_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="Test.SearchFieldTest" class="method navigator-link" hash-for-method="openMainPageAndSearch">openMainPageAndSearch</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="Test.PricingCalculatorTest" class="method navigator-link" hash-for-method="openMainPageAndSearch">openMainPageAndSearch</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Surefire_suite -->
@@ -135,7 +135,7 @@
           <div class="suite-Surefire_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">Test.SearchFieldTest</span>
+              <span class="class-name">Test.PricingCalculatorTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -143,15 +143,15 @@
                   <a name="verifyTotalEstimatedMonthlyCost">
                   </a> <!-- verifyTotalEstimatedMonthlyCost -->
                   <span class="method-name">verifyTotalEstimatedMonthlyCost</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#ifmail&quot;}
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#cprnd&quot;}
   (Session info: chrome=120.0.6099.129)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [818e8362a7c8037a23e0729c01d043c5, findElement {using=id, value=ifmail}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.129, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Sundr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63469}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63469/devtoo..., se:cdpVersion: 120.0.6099.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 818e8362a7c8037a23e0729c01d043c5
+Command: [fe50c5f7393281dd6dcf0fa57b27e75b, findElement {using=id, value=cprnd}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.129, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Sundr\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65217}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65217/devtoo..., se:cdpVersion: 120.0.6099.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fe50c5f7393281dd6dcf0fa57b27e75b
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -165,11 +165,9 @@ Session ID: 818e8362a7c8037a23e0729c01d043c5
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy13.getWrappedElement(Unknown Source)
-	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:1048)
-	at Page.YopMail.YopMailInboxPage.getTotalMonthlyCost(YopMailInboxPage.java:37)
-	at Test.SearchFieldTest.verifyTotalEstimatedMonthlyCost(SearchFieldTest.java:57)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+	at Page.YopMail.YopMailMain.generateRandomlyEmail(YopMailMain.java:54)
+	at Test.PricingCalculatorTest.verifyTotalEstimatedMonthlyCost(PricingCalculatorTest.java:43)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 37 stack frames
 </div> <!-- stack-trace -->
@@ -182,7 +180,7 @@ Session ID: 818e8362a7c8037a23e0729c01d043c5
           <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">Test.SearchFieldTest</span>
+              <span class="class-name">Test.PricingCalculatorTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -208,7 +206,8 @@ Session ID: 818e8362a7c8037a23e0729c01d043c5
   &lt;test thread-count=&quot;5&quot; name=&quot;Surefire test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;service.TestDataReader&quot;/&gt;
-      &lt;class name=&quot;Test.SearchFieldTest&quot;/&gt;
+      &lt;class name=&quot;Test.PricingCalculatorTest&quot;/&gt;
+      &lt;class name=&quot;Utils.TestListener&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Surefire test --&gt;
 &lt;/suite&gt; &lt;!-- Surefire suite --&gt;
@@ -222,7 +221,7 @@ Session ID: 818e8362a7c8037a23e0729c01d043c5
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Surefire test (2 classes)</span>
+                <span class="test-name">Surefire test (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -251,12 +250,12 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyTotalEstimatedMonthlyCost')
-data.setCell(0, 2, 'Test.SearchFieldTest')
-data.setCell(0, 3, 74615);
+data.setCell(0, 2, 'Test.PricingCalculatorTest')
+data.setCell(0, 3, 66533);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'openMainPageAndSearch')
-data.setCell(1, 2, 'Test.SearchFieldTest')
-data.setCell(1, 3, 32977);
+data.setCell(1, 2, 'Test.PricingCalculatorTest')
+data.setCell(1, 3, 17030);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
@@ -287,32 +286,34 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Test.SearchFieldTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Test.PricingCalculatorTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">openMainPageAndSearch</span>
-                <span class="method-start">11576 ms</span>
+                <span class="method-start">16429 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopBrowser</span>
-                <span class="method-start">44557 ms</span>
+                <span class="method-start">33463 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">44886 ms</span>
+                <span class="method-start">34433 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyTotalEstimatedMonthlyCost</span>
-                <span class="method-start">49767 ms</span>
+                <span class="method-start">39417 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">stopBrowser</span>
-                <span class="method-start">124389 ms</span>
+                <span class="method-start">106576 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

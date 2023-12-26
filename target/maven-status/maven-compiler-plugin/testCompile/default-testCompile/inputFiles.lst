@@ -1,12 +1,13 @@
 C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\Page\Google\PricingCalculatorLegacyPage.java
 C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\Page\Google\SearchResultsPage.java
 C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\Page\YopMail\EmailGenerator.java
-C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\Test\SearchFieldTest.java
 C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\driver\DriverSingleton.java
 C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\Page\Google\PricingCalculatorPage.java
+C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\Test\PricingCalculatorTest.java
 C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\Utils\BrowserNavigation.java
 C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\model\ComputerEngine.java
 C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\Page\YopMail\ADSGoogleVignette.java
+C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\Utils\TestListener.java
 C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\Page\AbstractPage.java
 C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\Page\Google\GoogleMainPage.java
 C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\service\TestDataReader.java

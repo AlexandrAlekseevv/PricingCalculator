@@ -101,5 +101,7 @@
     <orderEntry type="library" name="Maven: org.testng:testng:7.7.0" level="project" />
     <orderEntry type="library" name="Maven: com.beust:jcommander:1.82" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.webjars:jquery:3.6.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.20.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-core:2.20.0" level="project" />
   </component>
 </module>

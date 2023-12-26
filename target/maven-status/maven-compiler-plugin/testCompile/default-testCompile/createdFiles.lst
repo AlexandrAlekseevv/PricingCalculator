@@ -2,11 +2,12 @@ Page\Google\SearchResultsPage.class
 Page\AbstractPage.class
 Page\YopMail\EmailGenerator.class
 Page\Google\PricingCalculatorLegacyPage.class
-Test\SearchFieldTest.class
 Page\YopMail\YopMailInboxPage.class
 Utils\BrowserNavigation.class
+Utils\TestListener.class
 service\TestDataReader.class
 Page\Google\PricingCalculatorPage.class
+Test\PricingCalculatorTest.class
 Page\YopMail\YopMailMain.class
 model\ComputerEngine.class
 driver\DriverSingleton.class
