@@ -1,7 +1,8 @@
 package Test;
 
-import Page.MainPage;
-import Page.YopMailMain;
+import Page.Google.MainPage;
+import Page.Google.PricingCalculatorLegacyPage;
+import Page.YopMail.YopMailMain;
 import model.ComputerEngine;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -17,13 +18,12 @@ public class SearchFieldTest extends CommonCondition {
         String nameOfClass = String.valueOf(new MainPage(driver).openPage(IN_CURRENT_TAB)
                 .invokePageWithSearchResults(SEARCH_FIELD_TEXT)
                 .openSearchedPage(SEARCH_FIELD_TEXT)
+                .addToEstimate()
+                .switchToPricingCalculatorLegacyPage()
                 .fillComputerEngineForm(testComputer)
                 .newWebsitePage(new YopMailMain(driver))
                 .openPage(IN_NEW_TAB)
                 .generateRandomlyEmail());
-
-
-
 
 
         Assert.assertEquals(nameOfClass, "class Page.PricingCalculatorPage");

@@ -1,11 +1,12 @@
-package Page;
+package Page.YopMail;
 
+import Page.AbstractPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class EmailGenerator extends AbstractPage{
+public class EmailGenerator extends AbstractPage {
     private final static String PAGE_URL ="https://yopmail.com/email-generator";
 
     @FindBy(id = "egen")

@@ -1,5 +1,6 @@
-package Page;
+package Page.Google;
 
+import Page.AbstractPage;
 import model.ComputerEngine;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
@@ -10,9 +11,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 
-public class PricingCalculatorPage extends AbstractPage {
+public class PricingCalculatorLegacyPage extends AbstractPage {
 
-    private final String PAGE_URL = "https://cloud.google.com/products/calculator";
+    private final String PAGE_URL = "https://cloud.google.com/products/calculator-legacy";
 
     @FindBy(xpath = "//md-tab-item//span[text() = 'Compute Engine']")
     WebElement computerEngineTab;
@@ -23,9 +24,9 @@ public class PricingCalculatorPage extends AbstractPage {
     @FindBy(id = "myFrame")
     private WebElement iframe2;
 
-    @FindBy(id = "input_99")
-    private WebElement numberOfInstance;
     @FindBy(id = "input_100")
+    private WebElement numberOfInstance;
+    @FindBy(id = "input_101")
     private WebElement whatAreTheseInstancesFor;
     @FindBy(xpath = "//label[text()= 'Operating System / Software']/following-sibling::md-select[@role='listbox']")
     private WebElement operatingSystemSoftware;
@@ -54,7 +55,7 @@ public class PricingCalculatorPage extends AbstractPage {
     private WebElement instancesAddToEstimateButton;
 
     @Override
-    public PricingCalculatorPage openPage(boolean currentTab) {
+    public PricingCalculatorLegacyPage openPage(boolean currentTab) {
         if (!currentTab) {
             openNewTab();
         }
@@ -63,14 +64,14 @@ public class PricingCalculatorPage extends AbstractPage {
 
     }
 
-    public PricingCalculatorPage(WebDriver driver) {
+    public PricingCalculatorLegacyPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(this.driver, this);
     }
 
 
 
-    public PricingCalculatorPage chooseComputerEngineTab() {
+    public PricingCalculatorLegacyPage chooseComputerEngineTab() {
         switchToFormFrame();
         computerEngineTab.click();
         return this;
@@ -89,7 +90,7 @@ public class PricingCalculatorPage extends AbstractPage {
 
 
 
-    public PricingCalculatorPage fillComputerEngineForm(ComputerEngine computerEngine) {
+    public PricingCalculatorLegacyPage fillComputerEngineForm(ComputerEngine computerEngine) {
 
         switchToFormFrame();
         computerEngineTab.click();

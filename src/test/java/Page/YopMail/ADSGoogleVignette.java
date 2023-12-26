@@ -1,5 +1,6 @@
-package Page;
+package Page.YopMail;
 
+import Page.AbstractPage;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
