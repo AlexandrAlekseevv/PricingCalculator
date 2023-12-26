@@ -21,12 +21,19 @@ public class EmailGenerator extends AbstractPage {
         PageFactory.initElements(this.driver,this);
     }
 
+
     @Override
-    public AbstractPage openPage(boolean isCurrentTab) {
+    public EmailGenerator openPage(boolean isCurrentTab) {
         if (!isCurrentTab) {
             openNewTab();
         }
         driver.navigate().to(PAGE_URL);
         return this;
     }
+
+    public YopMailInboxPage switchToInbox(){
+        checkInboxButton.click();
+        return new YopMailInboxPage(driver);
+    }
+
 }

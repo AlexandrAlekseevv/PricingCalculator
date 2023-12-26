@@ -1,13 +1,15 @@
 package Page.Google;
 
 import Page.AbstractPage;
+import Utils.BrowserNavigation;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class MainPage extends AbstractPage {
+public class GoogleMainPage extends AbstractPage {
+    BrowserNavigation browserNavigation;
 
     private final String BASE_URL = "https://cloud.google.com/";
 
@@ -16,7 +18,7 @@ public class MainPage extends AbstractPage {
 
 
     @Override
-    public MainPage openPage(boolean isCurrentTab) {
+    public GoogleMainPage openPage(boolean isCurrentTab) {
         if (!isCurrentTab) {
             openNewTab();
         }
@@ -25,7 +27,7 @@ public class MainPage extends AbstractPage {
 
     }
 
-    public MainPage(WebDriver driver) {
+    public GoogleMainPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(this.driver, this);
     }

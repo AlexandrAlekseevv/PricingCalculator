@@ -21,7 +21,7 @@ public class ADSGoogleVignette extends AbstractPage {
     @FindBy(id = "ad_iframe")
     private WebElement iframe2;
 
-    @FindBy(xpath = "//*[@id='dismiss-button']")
+    @FindBy(id ="dismiss-button")
     private WebElement closeADButton;
 
     public ADSGoogleVignette(WebDriver driver) {
@@ -39,10 +39,13 @@ public class ADSGoogleVignette extends AbstractPage {
     }
 
     public void closeADSVignette() {
-        driver.switchTo().frame(iframe1).switchTo().frame(iframe2);
+        try {
+            driver.switchTo().frame(iframe1).switchTo().frame(iframe2);
 
-        closeADButton.click();
-
+            closeADButton.click();
+        }catch(Exception e){
+            System.err.println(e);
+        }
 
     }
 }

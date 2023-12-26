@@ -2,8 +2,8 @@ Page\Google\SearchResultsPage.class
 Page\AbstractPage.class
 Page\YopMail\EmailGenerator.class
 Page\Google\PricingCalculatorLegacyPage.class
-Page\Google\MainPage.class
 Test\SearchFieldTest.class
+Page\YopMail\YopMailInboxPage.class
 Utils\BrowserNavigation.class
 service\TestDataReader.class
 Page\Google\PricingCalculatorPage.class
@@ -12,4 +12,5 @@ model\ComputerEngine.class
 driver\DriverSingleton.class
 Page\YopMail\ADSGoogleVignette.class
 service\ComputerEngineCreator.class
+Page\Google\GoogleMainPage.class
 Test\CommonCondition.class

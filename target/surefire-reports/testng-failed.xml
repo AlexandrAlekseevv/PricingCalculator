@@ -5,7 +5,8 @@
     <classes>
       <class name="Test.SearchFieldTest">
         <methods>
-          <include name="trueIsTrue"/>
+          <include name="verifyTotalEstimatedMonthlyCost"/>
+          <include name="stopBrowser"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- Test.SearchFieldTest -->

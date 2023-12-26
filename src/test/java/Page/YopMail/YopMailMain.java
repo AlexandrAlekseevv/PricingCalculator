@@ -1,6 +1,8 @@
 package Page.YopMail;
 
 import Page.AbstractPage;
+import Page.Google.PricingCalculatorLegacyPage;
+import Utils.BrowserNavigation;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,6 +12,14 @@ public class YopMailMain extends AbstractPage {
 
     @FindBy(xpath = "//h3[text()='Random Email generator']")
     private WebElement generateEmailButton;
+
+    @FindBy(id ="cprnd")
+    private WebElement copyToClipboardButton;
+
+    @FindBy(xpath = "//button/*[contains(text(),'Check Inbox')]")
+    private WebElement checkInboxButton;
+
+
 
 //    @FindBy(xpath = "//*[@id='dismiss-button']")
 //    private WebElement closeADButton;
@@ -37,12 +47,19 @@ public class YopMailMain extends AbstractPage {
 
     }
 
-    public EmailGenerator generateRandomlyEmail() {
+    public PricingCalculatorLegacyPage generateRandomlyEmail() {
+        BrowserNavigation browserNavigation = BrowserNavigation.getInstance();
         generateEmailButton.click();
         new ADSGoogleVignette(driver).closeADSVignette();
-        return new EmailGenerator(driver);
+        copyToClipboardButton.click();
+        browserNavigation.switchToTab(1);
+        return new PricingCalculatorLegacyPage(driver);
     }
 
+    public YopMailInboxPage checkInbox(){
+        checkInboxButton.click();
+        return new YopMailInboxPage(driver);
+    }
 
 
 

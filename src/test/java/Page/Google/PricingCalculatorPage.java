@@ -48,19 +48,17 @@ public class PricingCalculatorPage extends AbstractPage {
 
     public PricingCalculatorLegacyPage switchToPricingCalculatorLegacyPage() {
 
-
         new WebDriverWait(driver, Duration.ofSeconds(WAIT_TIMEOUT_SECONDS))
                 .until(ExpectedConditions.elementToBeClickable(pricingCalculatorLegacyLink))
                 .click();
 
         java.util.Set<String> handles = driver.getWindowHandles();
 
-// Переключаемся на последнюю открытую вкладку (новую)
         for (String handle : handles) {
             driver.switchTo().window(handle);
         }
-        //driver.switchTo().window((String) handles.toArray()[0]);
-        System.out.println( "!!!!!!!!!!!!!!!!!" + driver.getCurrentUrl() + "11111111111111111111 ");
+
+
 
         return new PricingCalculatorLegacyPage(driver);
 

@@ -1,10 +1,12 @@
 package Page;
 
+import Utils.BrowserNavigation;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public abstract class AbstractPage {
+
     protected WebDriver driver;
     protected final int WAIT_TIMEOUT_SECONDS = 10;
 

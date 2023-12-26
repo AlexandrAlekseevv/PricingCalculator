@@ -54,9 +54,18 @@ public class PricingCalculatorLegacyPage extends AbstractPage {
     @FindBy(xpath = " //h2[contains(text(),'Instances')]/..//button[contains(text(),'Add to Estimate')]")
     private WebElement instancesAddToEstimateButton;
 
+    @FindBy(xpath = "//div[@class = 'cpc-cart-total']/h2/b")
+    WebElement totalPriceOfEstimate;
+
+    @FindBy(id = "Email Estimate")
+    private WebElement emailEstimateButton;
+
+    @FindBy(xpath = "//button[contains(text(),'Send Email')]")
+    private WebElement sendEmailButton;
+
     @Override
-    public PricingCalculatorLegacyPage openPage(boolean currentTab) {
-        if (!currentTab) {
+    public PricingCalculatorLegacyPage openPage(boolean isCurrentTab) {
+        if (!isCurrentTab) {
             openNewTab();
         }
         driver.navigate().to(PAGE_URL);
@@ -68,8 +77,6 @@ public class PricingCalculatorLegacyPage extends AbstractPage {
         super(driver);
         PageFactory.initElements(this.driver, this);
     }
-
-
 
     public PricingCalculatorLegacyPage chooseComputerEngineTab() {
         switchToFormFrame();
@@ -87,8 +94,17 @@ public class PricingCalculatorLegacyPage extends AbstractPage {
         driver.switchTo().defaultContent();
     }
 
+    public PricingCalculatorLegacyPage sendPriceToEmail(){
+        switchToFormFrame();
+        emailEstimateButton.click();
 
+        new WebDriverWait(driver, Duration.ofSeconds(WAIT_TIMEOUT_SECONDS))
+                .until(ExpectedConditions.elementToBeClickable(By.id("input_620")))
+                .sendKeys(Keys.CONTROL + "v");
 
+        sendEmailButton.click();
+        return this;
+    }
 
     public PricingCalculatorLegacyPage fillComputerEngineForm(ComputerEngine computerEngine) {
 
@@ -121,11 +137,6 @@ public class PricingCalculatorLegacyPage extends AbstractPage {
         return this;
     }
 
-
-
-
-
-
     private void selectOptionInDropDown(WebElement dropDownElement, String option) {
         if (!option.isBlank()) {
             String optionXpath = String.format(" //div[contains(@id,'select_container') and @aria-hidden = 'false']//div[contains(text(),'%s')]", option);
@@ -139,10 +150,10 @@ public class PricingCalculatorLegacyPage extends AbstractPage {
             new WebDriverWait(driver, Duration.ofSeconds(WAIT_TIMEOUT_SECONDS))
                     .until(ExpectedConditions.elementToBeClickable(By.xpath(optionXpath)))
                     .click();
-
-
         }
+    }
 
-
+    public String getTotalPriceOfEstimate() {
+        return totalPriceOfEstimate.getText();
     }
 }
