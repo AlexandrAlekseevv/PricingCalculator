@@ -1,11 +1,9 @@
 package driver;
 
 
-import org.openqa.selenium.JavascriptExecutor;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverSingleton  {
@@ -20,7 +18,7 @@ public class DriverSingleton  {
         if(null==driver){
             switch (System.getProperty("browser").toLowerCase()){
                 case "firefox":
-                    //WebDriverManager.firefoxdriver().setup();
+                    WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                     break;
 //                case "yandex" :
@@ -29,7 +27,7 @@ public class DriverSingleton  {
 //                    driver = new ChromeDriver(options);
 //                    break;
                 default:
-                    //WebDriverManager.chromedriver().setup();
+                    WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
             }
 

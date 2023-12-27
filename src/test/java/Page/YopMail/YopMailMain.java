@@ -19,17 +19,6 @@ public class YopMailMain extends AbstractPage {
     @FindBy(xpath = "//button/*[contains(text(),'Check Inbox')]")
     private WebElement checkInboxButton;
 
-
-
-//    @FindBy(xpath = "//*[@id='dismiss-button']")
-//    private WebElement closeADButton;
-//    @FindBy(xpath = "/html/ins/div/iframe")
-//    private WebElement iframe1;
-//
-//    @FindBy(id = "ad_iframe")
-//    private WebElement iframe2;
-
-
     private final static String PAGE_URL = "https://yopmail.com/";
 
     public YopMailMain(WebDriver driver) {

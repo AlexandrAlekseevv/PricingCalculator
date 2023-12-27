@@ -16,9 +16,6 @@ public class YopMailInboxPage extends AbstractPage {
     @FindBy(id = "ifmail")
     WebElement cloudFrame;
 
-
-
-
     public YopMailInboxPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(this.driver,this);

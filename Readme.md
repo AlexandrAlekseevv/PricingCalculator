@@ -45,3 +45,7 @@ Practical Task
 _______________________________________________
 gitbash:
 mvn -Dbrowser=chrome -Denvironment=dev -Dsurefire.suiteXmlFiles=src\\test\\resources\\testng-smoke.xml clean test
+
+
+Jenkins:
+![img.png](img.png)

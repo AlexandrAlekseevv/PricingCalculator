@@ -43,6 +43,7 @@ public class PricingCalculatorTest extends CommonCondition {
                 .generateRandomlyEmail()
                 .sendPriceToEmail().getTotalPriceOfEstimate();
 
+        //waiting for the e-mail to arrive.
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
@@ -54,7 +55,6 @@ public class PricingCalculatorTest extends CommonCondition {
                 .switchToInbox()
                 .openPage(IN_CURRENT_TAB)
                 .getTotalMonthlyCost();
-
 
         Assert.assertTrue(priceOnCalculatorPage.contains(priceInInbox));
     }

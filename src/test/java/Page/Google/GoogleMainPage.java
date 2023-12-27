@@ -32,12 +32,8 @@ public class GoogleMainPage extends AbstractPage {
         PageFactory.initElements(this.driver, this);
     }
 
-
     public SearchResultsPage invokePageWithSearchResults(String searchText){
         searchButton.sendKeys(searchText , Keys.ENTER);
         return new SearchResultsPage(driver);
     }
-
-
-
 }

@@ -1,16 +1,10 @@
 package Page.YopMail;
 
 import Page.AbstractPage;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class ADSGoogleVignette extends AbstractPage {
     private final static String PAGE_URL = "https://yopmail.com/#google_vignette";
