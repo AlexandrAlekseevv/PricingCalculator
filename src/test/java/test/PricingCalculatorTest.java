@@ -1,4 +1,4 @@
-package Test;
+package test;
 
 import Page.Google.GoogleMainPage;
 import Page.Google.PricingCalculatorPage;

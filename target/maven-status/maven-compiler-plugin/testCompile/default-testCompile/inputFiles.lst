@@ -3,7 +3,7 @@ C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\Page\Google\SearchResultsP
 C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\Page\YopMail\EmailGenerator.java
 C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\driver\DriverSingleton.java
 C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\Page\Google\PricingCalculatorPage.java
-C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\Test\PricingCalculatorTest.java
+C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\test\PricingCalculatorTest.java
 C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\Utils\BrowserNavigation.java
 C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\model\ComputerEngine.java
 C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\Page\YopMail\ADSGoogleVignette.java
@@ -12,6 +12,6 @@ C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\Page\AbstractPage.java
 C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\Page\Google\GoogleMainPage.java
 C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\service\TestDataReader.java
 C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\Page\YopMail\YopMailMain.java
-C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\Test\CommonCondition.java
+C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\test\CommonCondition.java
 C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\Page\YopMail\YopMailInboxPage.java
 C:\JavaEd\SelleniumEX\PricingCalculator\src\test\java\service\ComputerEngineCreator.java

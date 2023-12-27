@@ -1,4 +1,4 @@
-package Test;
+package test;
 
 import Utils.TestListener;
 import driver.DriverSingleton;

@@ -41,3 +41,7 @@ Practical Task
 5)xml suites для smoke тестов и всех тестов
 6)При падении теста должен быть сделан скриншот с датой и временем
 7)Фреймворк должен иметь возможность запуска с Jenkins и параметризацией браузера, тест suite, environment. Результаты тестов должны быть на графике джобы, скриншоты должны быть заархивированны как артефакты
+
+_______________________________________________
+gitbash:
+mvn -Dbrowser=chrome -Denvironment=dev -Dsurefire.suiteXmlFiles=src\\test\\resources\\testng-smoke.xml clean test

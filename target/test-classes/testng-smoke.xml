@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Smoke" verbose="1">
+    <test name="PricingCalculatorTest.java">
+        <classes>
+            <class name="test.PricingCalculatorTest">
+                <methods>
+                    <include name="openMainPageAndSearch"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

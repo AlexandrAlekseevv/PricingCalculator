@@ -72,6 +72,7 @@ public class PricingCalculatorLegacyPage extends AbstractPage {
             openNewTab();
         }
         driver.navigate().to(PAGE_URL);
+        logger.info("[  PricingCalculatorLegacyPage opened ]");
         return this;
 
     }
@@ -84,6 +85,7 @@ public class PricingCalculatorLegacyPage extends AbstractPage {
     public PricingCalculatorLegacyPage chooseComputerEngineTab() {
         switchToFormFrame();
         computerEngineTab.click();
+        logger.info("[ Computer Engine Tab selected ]");
         return this;
     }
 
@@ -106,6 +108,8 @@ public class PricingCalculatorLegacyPage extends AbstractPage {
                 .sendKeys(Keys.CONTROL + "v");
 
         sendEmailButton.click();
+        logger.info("[ Estimate price sent to email ]");
+
         return this;
     }
 
@@ -155,6 +159,7 @@ public class PricingCalculatorLegacyPage extends AbstractPage {
             new WebDriverWait(driver, Duration.ofSeconds(WAIT_TIMEOUT_SECONDS))
                     .until(ExpectedConditions.elementToBeClickable(By.xpath(optionXpath)))
                     .click();
+            logger.info("selected Option(" + option + " In DropDown: [" + dropDownElement + "]");
         }
     }
 
