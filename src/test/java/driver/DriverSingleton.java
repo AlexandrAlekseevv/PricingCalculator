@@ -29,6 +29,12 @@ public class DriverSingleton  {
                 default:
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
+//                    ChromeOptions chromeOptions = new ChromeOptions();
+//                    try {
+//                        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),chromeOptions);
+//                    } catch (MalformedURLException e) {
+//                        throw new RuntimeException(e);
+//                    }
             }
 
             driver.manage().window().maximize();
@@ -39,8 +45,9 @@ public class DriverSingleton  {
     }
 
     public static void closeDriver() {
+        if (driver != null){
         driver.quit();
-        driver = null;
+        driver = null;}
     }
 
 
